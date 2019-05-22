@@ -51,6 +51,7 @@ hand	= { 'computer': [],'human': [] }
 name = input("Hello! Please, enter your name: ")
 balance = int(input("Enter the amount of credits you wish to deposit: "))
 betEntered = False
+balanceUpdated = False
 
 for suit in suits:
 	for rank in range(1,14):
@@ -81,8 +82,9 @@ while keepPlaying:
 		print("Dealer: "+str(score['computer'])+" "+ name + ":"+str(score['human']))
 		
 		if(balance < 1):
-		    print("Your balance is low! Please get some more chips and compe back!")
-		    exit()
+		    if(balanceUpdated == False):
+		        print("Your balance is low! Please get some more chips and compe back!")
+		        exit()
 		else:
 		    print("Your balance is", balance)
 		
@@ -90,6 +92,7 @@ while keepPlaying:
 		    bet = int(input("Please, enter your bet: "))
 		    betEntered = True
 		    balance = balance - bet
+		    balanceUpdated = True
 		
 		
 		print()
@@ -164,6 +167,7 @@ while keepPlaying:
 	showCount(hand['human'])
 	print()
 	betEntered = False
+	balanceUpdated = False
 	if input("(Q)uit or enter for next round").upper() == 'Q':
 		gameEnd(score)
 
