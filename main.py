@@ -152,6 +152,11 @@ while keepPlaying:
 		print(name, 'Wins')
 		score['human'] += 1
 		balance = balance + 2 * bet
+	elif handCount(hand['human']) == handCount(hand['computer']):
+	    print('Deuce')
+	    score['human'] += 1
+	    score['computer'] += 1
+	    balance = balance + bet
 	else:
 		print('Dealer Wins')
 		score['computer'] += 1
