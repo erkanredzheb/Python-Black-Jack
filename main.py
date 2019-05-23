@@ -83,7 +83,7 @@ while keepPlaying:
 		
 		if(balance < 1):
 		    if(balanceUpdated == False):
-		        print("Your balance is low! Please get some more chips and compe back!")
+		        print("Your balance is low! Please get some more chips and come back!")
 		        exit()
 		else:
 		    print("Your balance is", balance)
