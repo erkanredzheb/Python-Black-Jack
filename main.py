@@ -79,7 +79,7 @@ while keepPlaying:
 
 	while playHuman:
 		os.system('clear')
-		print("Dealer: "+str(score['computer'])+" "+ name + ":"+str(score['human']))
+		print("Dealer: "+str(score['computer'])+" | "+ name + ": "+str(score['human']))
 		
 		if(balance < 1):
 		    if(balanceUpdated == False):
